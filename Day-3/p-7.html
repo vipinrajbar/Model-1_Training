@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multi Level Menu</title>
+
+<style>
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, sans-serif;
+}
+
+ul{
+    list-style: none;
+    background: black;
+}
+
+ul li{
+    display: inline-block;
+    position: relative;
+}
+
+ul li a{
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+ul li a:hover{
+    background: hotpink;
+}
+
+/* First Dropdown */
+ul li ul{
+    display: none;
+    position: absolute;
+    background: gray;
+    min-width: 180px;
+}
+
+ul li:hover > ul{
+    display: block;
+}
+
+/* Dropdown items */
+ul li ul li{
+    display: block;
+    position: relative;
+}
+
+/* Second Level Dropdown */
+ul li ul li ul{
+    left: 180px;
+    top: 0;
+}
+
+</style>
+</head>
+
+<body>
+
+<h2>STACKSOUND</h2>
+
+<ul>
+
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Audio</a></li>
+    <li><a href="#">Video</a></li>
+    <li><a href="#">contact</a></li>
+    
+    <h1>Search</h1>
+     <li class="search-box">
+        <input type="text" placeholder="Search here">
+        <button>Search</button>
+    </li>
+ 
+
+
+
+</ul>
+
+</body>
+</html>
