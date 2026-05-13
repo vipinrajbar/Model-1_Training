@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spoken English Poster</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#dcdcdc;
+}
+
+.poster{
+    width:700px;
+    height:450px;
+    background:#071824;
+    border-radius:12px;
+    position:relative;
+    overflow:hidden;
+    color:white;
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* Yellow Circle */
+.poster::before{
+    content:"";
+    position:absolute;
+    width:320px;
+    height:320px;
+    background:#f4c400;
+    border-radius:50%;
+    right:-120px;
+    bottom:-130px;
+}
+
+/* Logo */
+.logo{
+    position:absolute;
+    top:18px;
+    right:30px;
+    text-align:center;
+    font-weight:bold;
+    z-index:2;
+}
+
+.logo h2{
+    font-size:22px;
+}
+
+.logo span{
+    font-size:10px;
+    letter-spacing:2px;
+}
+
+/* Left Content */
+.content{
+    position:absolute;
+    top:45px;
+    left:40px;
+    width:320px;
+    z-index:2;
+}
+
+.content h1{
+    font-size:48px;
+    line-height:55px;
+    margin-bottom:20px;
+    color:white;
+}
+
+.content h1 span{
+    color:#f4c400;
+}
+
+.content ul{
+    list-style:none;
+    margin-top:15px;
+}
+
+.content ul li{
+    margin-bottom:10px;
+    font-size:14px;
+    position:relative;
+    padding-left:18px;
+}
+
+.content ul li::before{
+    content:"●";
+    color:#f4c400;
+    position:absolute;
+    left:0;
+}
+
+/* Button */
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    background:#f4c400;
+    color:black;
+    text-decoration:none;
+    padding:12px 28px;
+    border-radius:6px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:white;
+    transform:scale(1.05);
+}
+
+/* Contact */
+.contact{
+    position:absolute;
+    left:40px;
+    bottom:25px;
+    font-size:13px;
+    line-height:24px;
+    z-index:2;
+}
+
+/* Student Image */
+.image-box{
+    position:absolute;
+    right:10px;
+    bottom:0;
+    z-index:1;
+}
+
+.image-box img{
+    height:440px;
+    object-fit:contain;
+}
+
+/* Bottom Line */
+.border-line{
+    position:absolute;
+    width:100%;
+    height:8px;
+    background:#f4c400;
+    bottom:0;
+    left:0;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="poster">
+
+    <!-- Logo -->
+    <div class="logo">
+        <h2>COSMIC</h2>
+        <span>INSTITUTE</span>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+
+        <h1>
+            SPOKEN<br>
+            <span>ENGLISH</span><br>
+            COURSE
+        </h1>
+
+        <ul>
+            <li>Pronunciation of Words</li>
+            <li>Oral Expression of Language</li>
+            <li>Vocabulary and Word Recognition</li>
+            <li>Grammar</li>
+            <li>Phonics</li>
+            <li>Writing Skills</li>
+        </ul>
+
+        <a href="https://in.pinterest.com/pin/spoken-english-course--67835538132122976/" 
+           target="_blank"
+           class="btn">
+           Enroll Now
+        </a>
+
+    </div>
+
+    <!-- Contact -->
+    <div class="contact">
+        <div>📞 3456 - 34689643</div>
+        <div>✉ fgsg@gmail.com</div>
+        <div>📍 Your Address</div>
+    </div>
+
+    <!-- Boy Image -->
+    <div class="image-box">
+        <img src="a.jpg" alt="Boy Student">
+    </div>
+
+    <!-- Bottom Border -->
+    <div class="border-line"></div>
+
+</div>
+
+</body>
+</html>
