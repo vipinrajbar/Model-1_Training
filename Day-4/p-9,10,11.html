@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #division1{
+         position : absolute; 
+         height : 100px; 
+         width : 100px; 
+         left : 100px; 
+         top : 150px; 
+         background-color : red; 
+         z-index : 5; } 
+    #division2{ 
+        position : absolute;
+         height : 200px; 
+         width : 200px; 
+         left : 50px; 
+         top : 100px; 
+         background-color : blue; 
+         z-index : 2;
+    }
+    #division1{
+         background-color : red; 
+         float : left; 
+         width: 40%; 
+        } 
+    #division2{ 
+        background-color : blue; 
+        float : right; 
+        width: 48%;
+    }
+     body{
+    background-color: orange;
+ }
+ @media screen and (min-width: 350px) {
+    body{
+        background-color: blueviolet;
+    }   
+ }   
+
+</style>
+<body>
+    <div id="division1"> </div> 
+    <div id="division2"> </div>
+    
+    <h1>CSS Float Properties</h1>
+
+    <div id="division1">ABC Content</div>
+    <div id="division2">XYZ Content</div>
+    
+</body>
+</html>
