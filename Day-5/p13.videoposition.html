@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video Position Effect</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+body{
+    background:hotpink;
+}
+header{
+    background:#222;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+header h1{
+    margin-bottom:15px;
+}    
+.video-section{
+    position:relative;
+    width:70%;
+    margin:50px auto;
+}
+.video-section video{
+    width:100%;
+    border-radius:20px;
+}
+.video-text{
+    position:absolute;
+    top:20px;
+    left:20px;
+    background:rgba(0,0,0,0.6);
+    color:white;
+    padding:15px;
+    font-size:30px;
+    border-radius:10px;
+}
+</style>
+</head>
+
+<header>
+    <h1>Video Position</h1>
+</header>
+
+<section class="video-section">
+
+    <video autoplay muted loop playsinline>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+    </video>
+
+</body>
+</html>
