@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Rotate Animation</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        @keyframes moveBox {
+            0% {
+                transform: translateX(-50px);
+            }
+
+            100% {
+                transform: translateX(50px);
+            }
+        }
+
+        .animate-move {
+            animation: moveBox 3s ease-in-out infinite alternate;
+        }
+    </style>
+</head>
+
+<body class="h-screen flex items-center justify-center bg-black overflow-hidden">
+
+    <div class="relative w-[300px] h-[300px]
+              animate-spin animate-move" style="animation-duration:6s,3s;">
+
+        <div class="absolute w-[100px] h-[100px] bg-red-500
+                left-[100px] top-0" style="clip-path:polygon(50% 0%, 0% 100%, 100% 100%);">
+        </div>
+
+        <div class="absolute w-[100px] h-[100px] bg-blue-500
+                left-[100px] bottom-0 rotate-180" style="clip-path:polygon(50% 0%, 0% 100%, 100% 100%);">
+        </div>
+
+        <div class="absolute w-[100px] h-[100px] bg-green-500
+                left-0 top-[100px] -rotate-90" style="clip-path:polygon(50% 0%, 0% 100%, 100% 100%);">
+        </div>
+
+        <div class="absolute w-[100px] h-[100px] bg-orange-500
+                right-0 top-[100px] rotate-90" style="clip-path:polygon(50% 0%, 0% 100%, 100% 100%);">
+        </div>
+
+    </div>
+
+</body>
+
+</html>
