@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f4f4f4;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+.form-box{
+    width:400px;
+    background:greenyellow;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+.input-box{
+    margin-bottom:15px;
+}
+label{
+    display:block;
+    margin-bottom:5px;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"]{
+    width:100%;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+.gender{
+    margin-bottom:15px;
+}
+button{
+    width:100%;
+    padding:10px;
+    background:blue;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+button:hover{
+    background:darkblue;
+}
+
+</style>
+<body>
+
+<div class="form-box">
+
+    <h2>Registration Form</h2>
+
+    <form id="myForm">
+
+        <div class="input-box">
+            <label>Full Name</label>
+            <input type="text" id="name" placeholder="Enter your name">
+        </div>
+
+        <div class="input-box">
+            <label>Email</label>
+            <input type="email" id="email" placeholder="Enter your email">
+        </div>
+
+        <div class="input-box">
+            <label>Password</label>
+            <input type="password" id="password" placeholder="Enter password">
+        </div>
+
+        <div class="gender">
+            <label>Gender</label>
+
+            <input type="radio" name="gender"> Male
+            <input type="radio" name="gender"> Female
+        </div>
+
+        <div class="input-box">
+            <input type="checkbox" id="check">
+            I agree to the terms and conditions
+        </div>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+</div>
+
+<script>
+
+document.getElementById("myForm").addEventListener("submit", function(event){
+
+    event.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+    let check = document.getElementById("check").checked;
+
+    if(name == "" || email == "" || password == ""){
+        alert("Please fill all fields");
+    }
+    else if(check == false){
+        alert("Please accept terms and conditions");
+    }
+    else{
+        alert("Form Submitted Successfully");
+    }
+
+}
+);
+
+</script>
+
+</body>
+</html>
