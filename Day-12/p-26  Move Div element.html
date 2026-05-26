@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: aqua;
+      padding: 40px;
+    }
+    .container {
+      width: 300px;
+      min-height: 150px;
+      border: 2px solid #222; 
+      padding: 20px;
+      margin: 20px;
+      display: inline-block;
+      vertical-align: top;
+      background: rgb(245, 179, 214);
+    }
+    .box {
+      background: #008080; 
+      color: aliceblue;
+      padding: 20px;
+      text-align: center;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+    button {
+      padding: 10px 20px;
+      cursor: pointer;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="container1" class="container">
+    <h3>Container 1</h3> <div id="moveBox" class="box">
+      Move me
+    </div> 
+  </div>
+
+  <div id="container2" class="container">
+    <h3>Container 2</h3>
+  </div><br>
+
+  <button id="moveBtn">Move Div</button>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      $("#moveBtn").click(function(){
+        // Now this successfully finds #moveBox and moves it to #container2
+        $("#moveBox").appendTo("#container2");
+      });
+    });
+  </script>
+   
+</body>
+</html>

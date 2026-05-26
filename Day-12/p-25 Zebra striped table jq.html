@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zebra Stripes Table </title>
+
+<style>
+    body{
+        font-family: Arial, sans-serif;
+        background-color: blanchedalmond;
+        padding: 50px;
+
+    }
+    table{
+        width: 50%;
+        margin: auto;
+        padding: 60px;
+        border-collapse: collapse;
+        background: rgb(135, 205, 222);
+        box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    th, td{
+        padding: 15px;
+        border: 1px solid rgb(221, 135, 222);
+        text-align: left;
+    }
+    th{
+        background: #ddd;
+        color: black;
+    }
+    .stripe{
+        background: #f2f2f2;
+
+    }
+    tr.hover{
+        background: #fbdefb;
+    }
+</style>
+</head>
+<body>
+    <table id="zebraTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Department</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Vipin</td>
+                <td>Developer</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Shubham</td>
+                <td>Web Developer</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Maharshi</td>
+                <td>Designing</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Devansh</td>
+                <td>App Development</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Aditya</td>
+                <td>Marketing</td>
+            </tr>
+        </tbody>      
+    </table>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+
+      // Add zebra stripes to even rows
+      $("#zebraTable tbody tr:even").addClass("stripe");
+
+    });
+    </script>
+</body>
+</html>
