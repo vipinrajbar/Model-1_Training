@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Remove Table Row with jQuery</title>
+  <style>
+    table {
+         width: 100%; 
+         border-collapse: collapse; 
+         margin-top: 20px;
+    }
+    th, td { 
+        border: 1px solid blueviolet; 
+        padding: 10px; text-align: left;
+    }
+    th {
+        background-color: honeydew; 
+    }
+    button { 
+        background-color: red;
+        color: black; 
+        border: navy; 
+        padding: 5px 10px; 
+        cursor: pointer; 
+        border-radius: 3px; 
+    }
+    button:hover { 
+        background-color: #cc0000; 
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Employee List</h2>
+
+  <table id="employeeTable">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Role</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Alice Johnson</td>
+        <td>Developer</td>
+        <td><button class="remove-btn">Delete</button></td>
+      </tr>
+      <tr>
+        <td>Bob Smith</td>
+        <td>Designer</td>
+        <td><button class="remove-btn">Delete</button></td>
+      </tr>
+      <tr>
+        <td>Charlie Brown</td>
+        <td>Manager</td>
+        <td><button class="remove-btn">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      
+      $('#employeeTable').on('click', '.remove-btn', function(){
+
+        $(this).closest('tr').remove();
+        
+      });
+
+    });
+  </script>
+
+</body>
+</html>
