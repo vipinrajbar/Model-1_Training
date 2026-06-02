@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Live Type Mirror</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background:linear-gradient(135deg,#4f46e5,#9333ea);
+    }
+
+    .container{
+      width:350px;
+      background:#fff;
+      padding:30px;
+      border-radius:15px;
+      text-align:center;
+      box-shadow:0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    h1{
+      margin-bottom:20px;
+      color:#333;
+    }
+
+    input{
+      width:100%;
+      padding:12px;
+      border:2px solid #ccc;
+      border-radius:10px;
+      font-size:16px;
+      outline:none;
+    }
+
+    .output{
+      margin-top:20px;
+      font-size:20px;
+      color:#111827;
+      min-height:40px;
+      font-weight:bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Live Type Mirror</h1>
+
+    <input 
+      type="text"
+      id="textInput"
+      placeholder="Type here..."
+      onkeyup="mirrorText()"
+    >
+
+    <div class="output" id="outputText">
+      You typed:
+    </div>
+  </div>
+  
+
+  <script>
+    function mirrorText() {
+      let input = document.getElementById("textInput").value;
+
+      document.getElementById("outputText").innerHTML =
+        "You typed: " + input;
+    }
+  </script>
+
+</body>
+</html>
